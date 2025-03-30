@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级抽签系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-container">
+        <h1 class="neon-title">༺ 抽象（bushi抽签系统 ༻</h1>
+        
+        <div class="cyber-panel">
+            <div class="input-group">
+                <textarea id="nameList" class="cyber-input" placeholder="每行输入一个名字\n例如：\n张三\n李四\n王五"></textarea>
+                <div class="button-group">
+                    <label class="cyber-button" style="position:relative;">
+                        📁 上传文件
+                        <input type="file" id="fileInput" style="display:none;" accept=".txt,.csv" onchange="handleFileSelect(event)">
+                    </label>
+                    <button class="cyber-button" onclick="saveList()">💾 保存名单</button>
+                    <button class="cyber-button" onclick="startDraw()">🌀 开始抽签</button>
+                </div>
+            </div>
+            
+            <div id="resultPanel" class="result-panel">
+                <div id="randomDisplay" class="matrix-display"></div>
+                <div id="finalResult" class="neon-result"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

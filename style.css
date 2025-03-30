@@ -1,0 +1,95 @@
+/* 基础赛博朋克风格 */
+body {
+    background: linear-gradient(45deg, #0a0a2e, #1a1a4a);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #00f3ff;
+}
+
+.neon-title {
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00f3ff,
+                 0 0 20px #00f3ff,
+                 0 0 30px #00f3ff;
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+.cyber-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00f3ff;
+    box-shadow: 0 0 15px #00f3ff;
+    border-radius: 10px;
+}
+
+.cyber-input {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    background: #000;
+    border: 2px solid #6c00ff;
+    color: #00f3ff;
+    font-size: 1.1rem;
+    resize: vertical;
+    transition: all 0.3s;
+}
+
+.cyber-button {
+    background: linear-gradient(45deg, #6c00ff, #00f3ff);
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.cyber-button:hover {
+    box-shadow: 0 0 15px #6c00ff;
+    transform: translateY(-2px);
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px #00f3ff;
+    }
+    to {
+        text-shadow: 0 0 20px #00f3ff,
+                     0 0 30px #00f3ff;
+    }
+}
+
+.matrix-display {
+    height: 60px;
+    background: #000;
+    border: 1px solid #00f3ff;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-family: monospace;
+    overflow: hidden;
+    position: relative;
+}
+
+.neon-result {
+    font-size: 2em;
+    text-align: center;
+    padding: 1rem;
+    animation: resultGlow 1s infinite alternate;
+}
+
+@keyframes resultGlow {
+    from {
+        text-shadow: 0 0 5px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff,
+                     0 0 30px #ff00ff;
+    }
+}
